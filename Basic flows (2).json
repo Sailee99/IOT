@@ -1,0 +1,48 @@
+[
+    {
+        "id": "528795166c86ba7e",
+        "type": "telegram receiver",
+        "z": "98e2dc81a21fe195",
+        "name": "Sailee Bot",
+        "bot": "5cc695d4f7748671",
+        "saveDataDir": "",
+        "filterCommands": false,
+        "x": 840,
+        "y": 1440,
+        "wires": [
+            [
+                "8eff45962a6a2d46"
+            ],
+            [
+                "efc953b3bbb141b9"
+            ]
+        ]
+    },
+    {
+        "id": "5cc695d4f7748671",
+        "type": "telegram bot",
+        "botname": "SaileeBot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "addressfamily": "",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    }
+]

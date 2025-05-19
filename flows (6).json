@@ -1,0 +1,871 @@
+[
+    {
+        "id": "116cb2ba1bb9fa72",
+        "type": "tab",
+        "label": "Flow 5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "99b0673916b4cf34",
+        "type": "mqtt in",
+        "z": "116cb2ba1bb9fa72",
+        "name": "",
+        "topic": "HTW_IoTM2425/Sailee/temp",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b308ebaab9c33aa1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "137a2b5aa5c1e248",
+                "4c699c07438f6e65"
+            ]
+        ]
+    },
+    {
+        "id": "0fbae2d6a5417f49",
+        "type": "mqtt in",
+        "z": "116cb2ba1bb9fa72",
+        "name": "",
+        "topic": "HTW_IoTM2425/Sailee/humi",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b308ebaab9c33aa1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 320,
+        "wires": [
+            [
+                "9a46f52b83b611df",
+                "e9fa943946aa912e",
+                "1b03664105e55d2b",
+                "7a423337d72d2810"
+            ]
+        ]
+    },
+    {
+        "id": "137a2b5aa5c1e248",
+        "type": "ui_chart",
+        "z": "116cb2ba1bb9fa72",
+        "name": "",
+        "group": "d62c6dcb9ca86b2e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temp Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a46f52b83b611df",
+        "type": "ui_chart",
+        "z": "116cb2ba1bb9fa72",
+        "name": "",
+        "group": "d62c6dcb9ca86b2e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Humidity Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 580,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4c699c07438f6e65",
+        "type": "debug",
+        "z": "116cb2ba1bb9fa72",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "e9fa943946aa912e",
+        "type": "debug",
+        "z": "116cb2ba1bb9fa72",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "1fbbd132faebb3be",
+        "type": "mqtt out",
+        "z": "116cb2ba1bb9fa72",
+        "name": "",
+        "topic": "HTW_IoTM2425/Sailee/slider",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b308ebaab9c33aa1",
+        "x": 600,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "4030c981d7b9f518",
+        "type": "ui_gauge",
+        "z": "116cb2ba1bb9fa72",
+        "name": "",
+        "group": "d62c6dcb9ca86b2e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "Donut",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 630,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e2bb5ba78c955f6a",
+        "type": "ui_slider",
+        "z": "116cb2ba1bb9fa72",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "d62c6dcb9ca86b2e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "1",
+        "max": 10,
+        "step": 1,
+        "className": "",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "4030c981d7b9f518",
+                "1fbbd132faebb3be"
+            ]
+        ]
+    },
+    {
+        "id": "1bfaa391a523b461",
+        "type": "mqtt in",
+        "z": "116cb2ba1bb9fa72",
+        "name": "",
+        "topic": "HTW_IoTM2425/Sailee/temp",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b308ebaab9c33aa1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 200,
+        "y": 120,
+        "wires": [
+            [
+                "4030c981d7b9f518",
+                "137a2b5aa5c1e248",
+                "05a0ca9227aaf7cb"
+            ]
+        ]
+    },
+    {
+        "id": "b846d0fe8b4dd820",
+        "type": "mqtt in",
+        "z": "116cb2ba1bb9fa72",
+        "name": "",
+        "topic": "HTW_IoTM2425/Sailee/humi",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "b308ebaab9c33aa1",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 380,
+        "wires": [
+            [
+                "9a46f52b83b611df"
+            ]
+        ]
+    },
+    {
+        "id": "1b03664105e55d2b",
+        "type": "ui_gauge",
+        "z": "116cb2ba1bb9fa72",
+        "name": "",
+        "group": "d62c6dcb9ca86b2e",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "gauge",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 590,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "05a0ca9227aaf7cb",
+        "type": "switch",
+        "z": "116cb2ba1bb9fa72",
+        "name": "Temp switch",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "15",
+                "vt": "num"
+            },
+            {
+                "t": "gte",
+                "v": "40",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 170,
+        "y": 540,
+        "wires": [
+            [
+                "9573f9c6f398ed05",
+                "ede9f6787cf9ea19",
+                "b4f0e32b3e5aa755"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "adb69ed82e1f8720",
+        "type": "telegram sender",
+        "z": "116cb2ba1bb9fa72",
+        "name": "SaileeHtwBot",
+        "bot": "f7d74a6359fe2c67",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 880,
+        "y": 560,
+        "wires": [
+            [
+                "0595805c42836190"
+            ]
+        ]
+    },
+    {
+        "id": "9573f9c6f398ed05",
+        "type": "debug",
+        "z": "116cb2ba1bb9fa72",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "3d77bc228611759e",
+        "type": "change",
+        "z": "116cb2ba1bb9fa72",
+        "name": "Meassge receiver (Temp)",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.content",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.type",
+                "pt": "msg",
+                "to": "message",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.chatId",
+                "pt": "msg",
+                "to": "5458291433",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 560,
+        "wires": [
+            [
+                "adb69ed82e1f8720"
+            ]
+        ]
+    },
+    {
+        "id": "0595805c42836190",
+        "type": "debug",
+        "z": "116cb2ba1bb9fa72",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "7a423337d72d2810",
+        "type": "switch",
+        "z": "116cb2ba1bb9fa72",
+        "name": "humi switch",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "40",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 130,
+        "y": 740,
+        "wires": [
+            [
+                "52ac14dd77b45d96"
+            ]
+        ]
+    },
+    {
+        "id": "77e72799a1118624",
+        "type": "switch",
+        "z": "116cb2ba1bb9fa72",
+        "name": "Temperature Range",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "t": "btwn",
+                "v": "10",
+                "vt": "num",
+                "v2": "15",
+                "v2t": "num"
+            },
+            {
+                "t": "gte",
+                "v": "20",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 480,
+        "y": 860,
+        "wires": [
+            [
+                "7f744ffa2b074d15"
+            ],
+            [
+                "5edc2a2573d34a3f"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "7f744ffa2b074d15",
+        "type": "change",
+        "z": "116cb2ba1bb9fa72",
+        "name": "Cold Weather Clothes",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.type",
+                "pt": "msg",
+                "to": "message",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.chatId",
+                "pt": "msg",
+                "to": "",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5edc2a2573d34a3f",
+        "type": "change",
+        "z": "116cb2ba1bb9fa72",
+        "name": "Mild Weather Clothes",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "It's mild outside. A light jacket or sweater should be enough.",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c36dd503d8c0edcf",
+        "type": "change",
+        "z": "116cb2ba1bb9fa72",
+        "name": "Warm Weather Clothes",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.content",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.type",
+                "pt": "msg",
+                "to": "message",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.chatId",
+                "pt": "msg",
+                "to": "5458291433",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 680,
+        "wires": [
+            [
+                "537218187ce9e007"
+            ]
+        ]
+    },
+    {
+        "id": "537218187ce9e007",
+        "type": "telegram sender",
+        "z": "116cb2ba1bb9fa72",
+        "name": "SaileeHtwBot",
+        "bot": "f7d74a6359fe2c67",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 900,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f4765624700be4cb",
+        "type": "inject",
+        "z": "116cb2ba1bb9fa72",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "55",
+        "payloadType": "num",
+        "x": 90,
+        "y": 620,
+        "wires": [
+            [
+                "05a0ca9227aaf7cb"
+            ]
+        ]
+    },
+    {
+        "id": "ede9f6787cf9ea19",
+        "type": "string",
+        "z": "116cb2ba1bb9fa72",
+        "name": "set message",
+        "methods": [
+            {
+                "name": "append",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "its working"
+                    }
+                ]
+            },
+            {
+                "name": "prepend",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "yessssssssss"
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "payload",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 370,
+        "y": 560,
+        "wires": [
+            [
+                "3d77bc228611759e"
+            ]
+        ]
+    },
+    {
+        "id": "b4f0e32b3e5aa755",
+        "type": "string",
+        "z": "116cb2ba1bb9fa72",
+        "name": "set message",
+        "methods": [
+            {
+                "name": "append",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "its warm outside"
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "payload",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 390,
+        "y": 680,
+        "wires": [
+            [
+                "c36dd503d8c0edcf"
+            ]
+        ]
+    },
+    {
+        "id": "52ac14dd77b45d96",
+        "type": "string",
+        "z": "116cb2ba1bb9fa72",
+        "name": "set message",
+        "methods": [
+            {
+                "name": "append",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "Humidity is now "
+                    }
+                ]
+            },
+            {
+                "name": "prepend",
+                "params": [
+                    {
+                        "type": "str",
+                        "value": "%"
+                    }
+                ]
+            }
+        ],
+        "prop": "payload",
+        "propout": "payload",
+        "object": "msg",
+        "objectout": "msg",
+        "x": 310,
+        "y": 740,
+        "wires": [
+            [
+                "45c7192cfeda247f"
+            ]
+        ]
+    },
+    {
+        "id": "45c7192cfeda247f",
+        "type": "change",
+        "z": "116cb2ba1bb9fa72",
+        "name": "Meassge receiver (humi)",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.content",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.type",
+                "pt": "msg",
+                "to": "message",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.chatId",
+                "pt": "msg",
+                "to": "5458291433",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 647.4285888671875,
+        "y": 747.4285888671875,
+        "wires": [
+            [
+                "537218187ce9e007"
+            ]
+        ]
+    },
+    {
+        "id": "b308ebaab9c33aa1",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.f4.htw-berlin.de",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d62c6dcb9ca86b2e",
+        "type": "ui_group",
+        "name": "Projectdash",
+        "tab": "6f15d9f27819491a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f7d74a6359fe2c67",
+        "type": "telegram bot",
+        "botname": "SaileeHtwProBot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "testenvironment": false,
+        "updatemode": "polling",
+        "addressfamily": "",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksprotocol": "socks5",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
+        "id": "6f15d9f27819491a",
+        "type": "ui_tab",
+        "name": "Home1",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
